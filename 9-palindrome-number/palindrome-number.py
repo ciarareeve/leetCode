@@ -15,22 +15,17 @@ class Solution(object):
             int_list.append(x % 10)
             x = x/10
         if (len(int_list)%2 == 1):
-            print("in odd num section")
             mid = (len(int_list)/2) 
             int1 = int_list[: mid]
             int2= int_list[mid+1:]
         else:
-            print("in even num section")
             mid = (len(int_list)/2)
             int1 = int_list[: mid]
             int2= int_list[mid:]
 
         reversed_list = list(reversed(int2))
         
-        print (int1, reversed_list)
-
-        new = [i for i, j in zip(int1, reversed_list) if i ==j]
-        if len(new) == len(int1) == len(reversed_list):
+        if reversed_list == int1:
             return True
 
                 
