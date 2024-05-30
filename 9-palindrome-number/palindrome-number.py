@@ -14,12 +14,13 @@ class Solution(object):
         while x > 0:
             int_list.append(x % 10)
             x = x/10
-        
-        mid = (len(int_list)/2)
-        int1 = int_list[: mid]
         if (len(int_list)%2 == 1):
+            mid = (len(int_list)/2) 
+            int1 = int_list[: mid]
             int2= int_list[mid+1:]
         else:
+            mid = (len(int_list)/2)
+            int1 = int_list[: mid]
             int2= int_list[mid:]
 
         reversed_list = list(reversed(int2))
