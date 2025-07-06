@@ -13,10 +13,8 @@ class Solution(object):
                 total += conversion_map[i]
             else:
                 total += (conversion_map[i] - (2 * conversion_map[last_seen]))
-                
+
             last_seen = i
                 
-                
-        
         return total
             
